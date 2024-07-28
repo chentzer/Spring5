@@ -1,7 +1,6 @@
 import chentzer.car.Corolla;
 import chentzer.car.Swift;
-import chentzer.specs.V6;
-import chentzer.specs.V8;
+import chentzer.specs.EngineType;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -19,12 +18,14 @@ public class AppConfig {
     public Swift swift(){
         return new Swift();
     }
-    @Bean("V6Engine")
-    public V6 v6(){
-        return new V6();
+
+    @Bean("UnknownEngine")
+    public EngineType type(){
+        return new EngineType();
     }
-    @Bean("V8Engine")
-    public V8 v8(){
-        return new V8();
+
+    @Bean("V6Engine")
+    public EngineType V6type(){
+        return new EngineType("V6 Engine");
     }
 }

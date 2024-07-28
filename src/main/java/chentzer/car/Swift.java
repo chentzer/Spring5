@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Swift implements Car {
     @Autowired
-    @Qualifier("V8Engine")
+    @Qualifier("UnknownEngine")
     Engine engine;
 
     @Override
