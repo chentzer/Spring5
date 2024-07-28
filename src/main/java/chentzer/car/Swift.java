@@ -4,9 +4,7 @@ import chentzer.interfaces.Car;
 import chentzer.interfaces.Engine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 
-@Component("swift")
 public class Swift implements Car {
     @Autowired
     @Qualifier("V8Engine")
